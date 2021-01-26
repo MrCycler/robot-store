@@ -11,3 +11,10 @@
   <p>{{robot}}</p>
   <button (click)="deleteItem(i)">Borrar</button>
 </div>
+
+<div *ngFor="let robotPart of robotParts">
+  <h4>{{robotPart.title}}</h4>
+  <img [src]="robotPart.image" [alt]="robotPart.title">
+  <p>{{robotPart.description}}</p>
+  <p>{{"S/."+robotPart.price}}</p>
+</div>
