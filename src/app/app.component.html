@@ -4,3 +4,10 @@
 <div *ngIf="title==='robot-store'">
   Estas en la pantalla principal
 </div>
+<button (click)="addItem()">Add robot</button>
+
+<div *ngFor="let robot of robots; index as i">
+  <h4>{{"Robot nro"+i}}</h4>
+  <p>{{robot}}</p>
+  <button (click)="deleteItem(i)">Borrar</button>
+</div>
